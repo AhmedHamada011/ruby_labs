@@ -33,14 +33,18 @@
     </div>
 
     <div>
+      <%= form.label :user_id %> <br>
 
-        <%= form.collection_select :user_id, User.order(:name),:id,:name %>
+        <%= form.collection_select :user_id, User.order(:name),:id,:name ,{}, {:class=>'form-control'}%>
 
     </div>
 
 
     <div class="mb-3">
-    <%= form.submit %>
+    <%= form.submit  class: "btn btn-primary mt-3" %>
+    <%= link_to "Back", :back,class:"btn btn-secondary mt-3" %>
+
     </div>
+    
     
     <% end %>    
